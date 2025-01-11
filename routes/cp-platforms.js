@@ -106,7 +106,7 @@ router.get('/codechef', verifyToken, async (req, res) => {
 router.get('/leetcode', verifyToken, async (req, res) => {
   const { email } = req.user;
   const user = await User.findOne({ email });
-  const leetcodeId = user.leetcodeId;
+  const leetcodeId = user.leetcodeId; 
 
   try {
     // Fetch different endpoints for LeetCode data
